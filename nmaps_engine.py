@@ -78,10 +78,10 @@ class NmapsEngine:
 
         # Declare instance attributes
         self.actions = []
-        self.menu = self.tr(u'&Nmaps Engine')
+        self.menu = self.tr(u'&Mapli Qgis Plugin')
         # TODO: We are going to let the user set this up in a future iteration
-        self.toolbar = self.iface.addToolBar(u'NmapsEngine')
-        self.toolbar.setObjectName(u'NmapsEngine')
+        self.toolbar = self.iface.addToolBar(u'Mapli Qgis Plugin')
+        self.toolbar.setObjectName(u'Mapli Qgis Plugin')
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
@@ -96,7 +96,7 @@ class NmapsEngine:
         :rtype: QString
         """
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
-        return QCoreApplication.translate('NmapsEngine', message)
+        return QCoreApplication.translate('Mapli Qgis Plugin', message)
 
 
     def add_action(
@@ -199,7 +199,7 @@ class NmapsEngine:
         """Removes the plugin menu item and icon from QGIS GUI."""
         for action in self.actions:
             self.iface.removePluginMenu(
-                self.tr(u'&Nmaps Engine'),
+                self.tr(u'&Mapli Qgis Plugin'),
                 action)
             self.iface.removeToolBarIcon(action)
         # remove the toolbar
